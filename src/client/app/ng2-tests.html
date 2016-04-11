@@ -1,8 +1,4 @@
-<form>
-  <input type="text" placeholder="Username" #username>
-  <button (click)="findUser(username)">Find user</button>
-</form>
-
+<ta-login (login)="findUser($event)"></ta-login>
 <ta-user [user]="user" [msg]="msg"></ta-user>
 
 <router-outlet></router-outlet>

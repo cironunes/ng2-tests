@@ -1,6 +1,5 @@
 import {Component, Input} from 'angular2/core';
 
-
 @Component({
   selector: 'ta-user',
   templateUrl: 'app//ta-user/ta-user.html',

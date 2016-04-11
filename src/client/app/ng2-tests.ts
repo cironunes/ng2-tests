@@ -1,20 +1,15 @@
 import {Component} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-import {CliRouteConfig} from './route-config';
 
 import {TaUser} from './ta-user/ta-user';
-import {TaUserService} from './ta-user-service/ta-user-service';
+import {TaLogin} from './ta-login/ta-login';
+import {IUser, TaUserService} from './ta-user-service/ta-user-service';
 
 @Component({
-  selector: 'ng2-tests-app',
-  providers: [ROUTER_PROVIDERS, TaUserService],
+  selector: 'ng2-tests-app', providers: [TaUserService],
   templateUrl: 'app/ng2-tests.html',
-  directives: [ROUTER_DIRECTIVES, TaUser],
+  directives: [TaUser, TaLogin],
   pipes: []
 })
-@RouteConfig([
-
-].concat(CliRouteConfig))
 
 export class Ng2TestsApp {
   user;
@@ -23,12 +18,14 @@ export class Ng2TestsApp {
   constructor(public userService:TaUserService) {}
 
   findUser(username) {
-    this.userService.getUser(username.value).then((user) => {
-      this.user = user;
-      this.msg = '';
-    }).catch((error) => {
-      this.user = null;
-      this.msg = error;
-    });
+    this.userService.getUser(username)
+      .then((user) => {
+        this.user = user;
+        this.msg = '';
+      })
+      .catch((error) => {
+        this.msg = error;
+        this.user = null;
+      });
   }
 }

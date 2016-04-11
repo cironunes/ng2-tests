@@ -21,9 +21,7 @@ describe('TaUser Component', () => {
       let element = fixture.nativeElement;
 
       componentInstance.user = { name: 'Ciro', age: 18, favoriteColor: 'black' };
-
       fixture.detectChanges();
-
       expect(element.querySelector('h1').innerText).toBe('Ciro is 18 and his favorite color is black');
     });
   }));
@@ -35,7 +33,6 @@ describe('TaUser Component', () => {
 
       componentInstance.msg = 'User not found';
       fixture.detectChanges();
-
       expect(element.querySelector('h2').innerText).toBe('User not found');
     });
   }));
