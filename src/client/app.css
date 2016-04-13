@@ -1,0 +1,50 @@
+.app {
+  background: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(20,122,224,1) 100%);
+  font: 20px/ normal Helvetica;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.searchfield,
+.loading {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+h1, h2 {
+  font-weight: 100;
+  display: inline-block;
+  border-radius: 3px;
+  text-shadow: 0 2px 01px rgba(255, 255, 255, .3);
+  color: rgba(0, 0, 0, .8);
+}
+
+input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  margin-right: 20px;
+  outline: none;
+  width: 150px;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 1);
+  border: none;
+  color: rgb(33,33,33);
+  padding: 10px 20px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, .1);
+}
+
+::-webkit-input-placeholder,
+.loading {
+  color: rgba(0, 0, 0, .2)!important;
+}

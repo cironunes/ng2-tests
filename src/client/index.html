@@ -6,7 +6,8 @@
   <base href="/">
   {{content-for 'head'}}
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
+  <link rel="stylesheet" href="app.css">
+
   <!-- Service worker support is disabled by default.
        Install the worker script and uncomment to enable.
        Only enable service workers in production.
@@ -20,7 +21,7 @@
   -->
 </head>
 <body>
-  <ng2-tests-app>Loading...</ng2-tests-app>
+  <ng2-tests-app class="app"><span class="loading">Loading...</span></ng2-tests-app>
 
   <script src="vendor/es6-shim/es6-shim.js"></script>
   <script src="vendor/systemjs/dist/system-polyfills.js"></script>
