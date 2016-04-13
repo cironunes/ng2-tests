@@ -1,11 +1,8 @@
 import {
   it,
-  iit,
   describe,
-  ddescribe,
   expect,
   inject,
-  TestComponentBuilder,
   beforeEachProviders,
   fakeAsync,
   tick
@@ -19,7 +16,7 @@ describe('TaUserService Service', () => {
 
   describe('#getUser', () => {
     it('should get the user', inject([TaUserService], fakeAsync((service: TaUserService) => {
-      let user
+      let user;
       service.getUser('cironunes').then((value) => {
         user = value;
       });

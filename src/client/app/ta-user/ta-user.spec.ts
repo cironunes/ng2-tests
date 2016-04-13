@@ -1,20 +1,14 @@
 import {
   it,
-  iit,
   describe,
-  ddescribe,
   expect,
-  inject,
   injectAsync,
   TestComponentBuilder,
   beforeEachProviders
 } from 'angular2/testing';
-import {provide} from 'angular2/core';
 import {TaUser} from './ta-user';
 
 describe('TaUser Component', () => {
-  beforeEachProviders((): any[] => []);
-
   it('should show the info about the user', injectAsync([TestComponentBuilder], (tcb:TestComponentBuilder) => {
     return tcb.createAsync(TaUser).then((fixture) => {
       let componentInstance = fixture.componentInstance;
